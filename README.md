@@ -1,5 +1,8 @@
 # .dotfiles
 
+OS X dotfiles
+
 ![darwin](https://raw.githubusercontent.com/fsegouin/.dotfiles/master/others/darwin.png)
 
-OS X dotfiles
+## tmux
+![tmux](https://raw.githubusercontent.com/fsegouin/.dotfiles/master/others/tmux.png)
