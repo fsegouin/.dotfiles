@@ -6,3 +6,6 @@ OS X dotfiles
 
 ## tmux
 ![tmux](https://raw.githubusercontent.com/fsegouin/.dotfiles/master/others/tmux.png)
+
+## weechat
+![weechat](https://raw.githubusercontent.com/fsegouin/.dotfiles/master/others/weechat.png)
