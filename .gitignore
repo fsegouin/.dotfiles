@@ -1,0 +1,5 @@
+*.weechatlog
+*.log
+slack.cache
+weechat.conf
+ssh
