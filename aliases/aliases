@@ -1,6 +1,7 @@
 # GREP and FIND
 alias y='grep -Ri'
 alias n='grep -Rvi'
+alias f='find . -regex'
 
 # Recursively check current directory for files containing your argument
 alias bigrep='find -type f | xargs grep -in --color=always'
@@ -23,7 +24,7 @@ alias coincoin='du -ckhs * | sort -hr'
 alias mmv='noglob zmv -W'
 
 # TREE
-alias t='tree -L 1'
+alias t='tree -L 2'
 
 # NETWORK
 
@@ -35,12 +36,17 @@ spyn () { lsof -i -P +c 0 +M | grep -i "$1" }
 
 # IP addresses
 alias ip="dig +short myip.opendns.com @resolver1.opendns.com"
-alias ips="ifconfig -a | perl -nle'/(\d+\.\d+\.\d+\.\d+)/ && print $1"
+alias localip="ifconfig en0 inet | egrep -o '\b(?:\d{1,3}\.){3}\d{1,3}\b' | head -1"
 
 # MISC
 alias c='clear'
 alias a='vim ~/.dotfiles/aliases/aliases'
 alias d='cd ~/Development'
+alias e='nvim'
+alias lt='ls -lt | head -20'
+alias pbc='pbcopy'
+alias pbp='pbpaste'
+alias py='python'
 
 # YOLO STUFF
 alias stfu='sudo shutdown -h now'
@@ -71,7 +77,7 @@ alias emptytrash="sudo rm -rfv /Volumes/*/.Trashes; rm -rfv ~/.Trash"
 
 # View HTTP traffic
 alias sniff="sudo ngrep -d 'en1' -t '^(GET|POST) ' 'tcp and port 80'"
-alias httpdump="sudo tcpdump -i en1 -n -s 0 -w - | grep -a -o -E \"Host\: .*|GET \/.*\""
+alias httpdump="sudo tcpdump -i en0 -n -s 0 -w - | grep -a -o -E \"Host\: .*|GET \/.*\""
 
 # Show/hide hidden files in Finder
 alias showfinder='defaults write com.apple.Finder AppleShowAllFiles -bool TRUE && killall Finder'
@@ -105,10 +111,12 @@ alias vim='nvim'
 alias mongostart="mongod --config /usr/local/etc/mongod.conf"
 alias redisstart="redis-server /usr/local/etc/redis.conf"
 alias dockerstart='docker-machine start default && eval "$(docker-machine env default)"'
+alias dockerenv='eval "$(docker-machine env default)"'
 alias dockerstop='docker-machine stop default'
 alias dockerstopall='docker stop $(docker ps -a -q)'
 alias dockerrmall='docker rm $(docker ps -a -q)'
 alias dockerrmiall='docker rmi $(docker images -q)'
+alias dockerrmighost='docker rmi $(docker images | grep "^<none>" | awk "{print $3}")'
 
 # POKEMMO
 alias pokemmo="cd /Users/florentsegouin/Documents/PokeMMO-Client && ./PokeMMO.sh"
