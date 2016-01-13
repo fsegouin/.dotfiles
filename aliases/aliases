@@ -216,7 +216,7 @@ alias jsw='jekyll serve --watch'
 alias pi='pod install --no-repo-update'
 
 # IOS SIMULATOR
-alias ios='open /Applications/Xcode.app/Contents/Developer/Applications/iOS\ Simulator.app'
+alias ios='open /Applications/Xcode.app/Contents/Developer/Applications/Simulator.app'
 
 # SYSTEM
 
