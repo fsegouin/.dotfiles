@@ -268,3 +268,6 @@ alias dockerprune="docker system prune"
 
 # POKEMMO
 alias pokemmo="cd /Users/florentsegouin/Documents/PokeMMO-Client && ./PokeMMO.sh"
+
+# PYTHON SIMPLE HTTP SERVER
+alias pyweb="python -m SimpleHTTPServer 8000"
