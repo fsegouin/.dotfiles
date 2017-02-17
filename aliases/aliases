@@ -198,7 +198,7 @@ alias localip="ifconfig en0 inet | egrep -o '\b(?:\d{1,3}\.){3}\d{1,3}\b' | head
 alias c='clear'
 alias a='vim ~/.dotfiles/aliases/aliases'
 alias d='cd ~/Development'
-alias e='nvim'
+alias e='vim'
 alias lt='ls -lt | head -20'
 alias pbc='pbcopy'
 alias pbp='pbpaste'
@@ -260,9 +260,6 @@ alias fuck='eval $(thefuck $(fc -ln -1 | tail -n 1)); fc -R'
 # CHROME
 alias chrome="open -a 'Google Chrome'"
 alias chromekill="ps ux | grep '[C]hrome Helper --type=renderer' | grep -v extension-process | tr -s ' ' | cut -d ' ' -f2 | xargs kill"
-
-# IS VIM DEAD?
-alias vim='nvim'
 
 # SERVICES
 alias mongostart="mongod --config /usr/local/etc/mongod.conf"
