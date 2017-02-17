@@ -263,6 +263,8 @@ alias chromekill="ps ux | grep '[C]hrome Helper --type=renderer' | grep -v exten
 
 # SERVICES
 alias mongostart="mongod --config /usr/local/etc/mongod.conf"
+alias pgstart="pg_ctl -D /usr/local/var/postgres start"
+alias pgstop="pg_ctl -D /usr/local/var/postgres stop"
 alias redisstart="redis-server /usr/local/etc/redis.conf"
 alias dockerprune="docker system prune"
 
