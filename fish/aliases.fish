@@ -4,7 +4,7 @@ alias n 'grep -Rvi'
 alias f 'find . -regex'
 
 # DU
-alias ducks 'du -ckhs * | gsort -hr' # Needs coreutils installed
+alias ducks 'du -ckhs * | gsort -hr' # Needs coreutils
 
 # CD
 alias ... 'cd ../../'
@@ -17,7 +17,10 @@ alias w 'cd ~/Work'
 alias h 'history'
 alias t 'tree -L 2'
 alias g 'git'
+alias ccat 'pygmentize -g' # Colorized cat (needs Pygments)
 alias search 'grep -r . -e'
+alias cx 'chmod +x'
+alias 'c-x' 'chmod -x'
 
 # APPS
 alias ios 'open /Applications/Xcode.app/Contents/Developer/Applications/Simulator.app'
