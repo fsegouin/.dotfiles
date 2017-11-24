@@ -11,3 +11,6 @@ set PATH $GOROOT/bin $PATH
 
 # nvm stuff
 set PATH $HOME/.nvm/versions/node/(node -v)/bin $PATH
+
+# bobthefish
+set -g theme_color_scheme base16-light
