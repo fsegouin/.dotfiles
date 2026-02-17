@@ -1,0 +1,54 @@
+{
+  "env": {
+    "CLAUDE_CODE_EXPERIMENTAL_AGENT_TEAMS": "1"
+  },
+  "attribution": {
+    "commit": "",
+    "pr": ""
+  },
+  "permissions": {
+    "allow": [
+      "Bash(grep:*)",
+      "Bash(tree:*)",
+      "Bash(hyprctl version:*)",
+      "WebSearch",
+      "Bash(fc-list:*)",
+      "Bash(xxd:*)",
+      "Bash(printf '%s\\\\n' '%s/ARCHICON_PLACEHOLDER/\\\\xef\\\\x8c\\\\x83/g' 'w' 'q')",
+      "Bash(ed -s:*)",
+      "Bash( python3 -c \" import re with open\\(''/home/florent/.config/waybar/themes/flot-minimalist/config'', ''r''\\) as f: content = f.read\\(\\) content = content.replace\\(''ARCHICON_PLACEHOLDER'', ''\\\\uf303''\\) with open\\(''/home/florent/.config/waybar/themes/flot-minimalist/config'', ''w''\\) as f: f.write\\(content\\) \")",
+      "Bash(python3:*)",
+      "Bash(notify-send:*)",
+      "Bash(journalctl:*)",
+      "Bash(rofi -version:*)",
+      "Bash(rofi:*)",
+      "Bash(sudo cp:*)",
+      "Bash(hyprctl clients:*)",
+      "Bash(waybar --version:*)",
+      "Bash(printf:*)",
+      "WebFetch(domain:man.archlinux.org)",
+      "Bash(gsettings get:*)",
+      "Bash(matugen --help:*)",
+      "Bash(matugen image:*)",
+      "Bash(echo:*)",
+      "Bash(pgrep:*)",
+      "Bash(gsettings list-recursively:*)",
+      "Bash(ls:*)",
+      "Bash(git init:*)",
+      "Bash(git add:*)",
+      "Bash(git branch:*)",
+      "Bash(git commit:*)",
+      "Bash(flatpak override:*)",
+      "Bash(kitty:*)",
+      "Bash(getent group:*)",
+      "Bash(sg docker -c:*)",
+      "Bash(find:*)",
+      "WebFetch(domain:github.com)",
+      "Bash(xargs:*)"
+    ],
+    "defaultMode": "default"
+  },
+  "model": "opus",
+  "skipDangerousModePermissionPrompt": true,
+  "effortLevel": "medium"
+}

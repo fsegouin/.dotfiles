@@ -1,0 +1,23 @@
+{
+  "mcp-atlassian": {
+    "type": "stdio",
+    "command": "uvx",
+    "args": [
+      "--python",
+      "3.12",
+      "mcp-atlassian"
+    ],
+    "env": {
+      "JIRA_URL": "https://jira.uhub.biz",
+      "JIRA_PERSONAL_TOKEN": "REDACTED"
+    }
+  },
+  "langfuse-docs": {
+    "type": "http",
+    "url": "https://langfuse.com/api/mcp"
+  },
+  "openai-developer-docs": {
+    "type": "http",
+    "url": "https://developers.openai.com/mcp"
+  }
+}
