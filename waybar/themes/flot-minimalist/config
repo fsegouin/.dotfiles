@@ -1,0 +1,92 @@
+{
+    // General Settings
+    "layer": "top",
+    "position": "top",
+    "height": 32,
+    "margin-top": 8,
+    "margin-bottom": 0,
+    "margin-left": 8,
+    "margin-right": 8,
+    "spacing": 0,
+
+    // Load Modules
+    "include": [
+        "~/.config/waybar/modules.json"
+    ],
+
+    // Arch Logo Power Menu (custom module override)
+    "custom/archlogo": {
+        "format": "",
+        "on-click": "~/.config/ml4w/scripts/wlogout.sh",
+        "on-click-right": "hyprlock",
+        "tooltip-format": "Left: Power menu\nRight: Lock screen"
+    },
+
+    // Clock override for macOS style
+    "clock": {
+        "format": "{:%a %b %d  %H:%M}",
+        "tooltip-format": "<tt>{calendar}</tt>",
+        "calendar": {
+            "mode": "month",
+            "mode-mon-col": 3,
+            "weeks-pos": "right",
+            "on-scroll": 1,
+            "format": {
+                "months": "<span color='#ffead3'><b>{}</b></span>",
+                "days": "<span color='#ecc6d9'>{}</span>",
+                "weeks": "<span color='#99ffdd'><b>W{}</b></span>",
+                "weekdays": "<span color='#ffcc66'><b>{}</b></span>",
+                "today": "<span color='#ff6699'><b><u>{}</u></b></span>"
+            }
+        }
+    },
+
+    // CPU override for minimal display
+    "cpu": {
+        "format": "{icon} {usage}%",
+        "format-icons": ["󰻠"],
+        "tooltip": true,
+        "interval": 2,
+        "on-click": "~/.config/ml4w/settings/system-monitor.sh"
+    },
+
+    // Memory
+    "memory": {
+        "format": "{icon} {percentage}%",
+        "format-icons": ["󰍛"],
+        "tooltip": true,
+        "tooltip-format": "RAM: {used:0.1f}GB / {total:0.1f}GB",
+        "interval": 5,
+        "on-click": "~/.config/ml4w/settings/system-monitor.sh"
+    },
+
+    // Volume
+    "pulseaudio": {
+        "format": "{icon} {volume}%",
+        "format-muted": "󰝟 muted",
+        "format-icons": {
+            "default": ["󰕿", "󰖀", "󰕾"]
+        },
+        "tooltip-format": "{desc}: {volume}%",
+        "on-click": "pavucontrol",
+        "on-click-right": "pactl set-sink-mute @DEFAULT_SINK@ toggle",
+        "scroll-step": 5
+    },
+
+    // Modules Left - macOS style: Logo + Workspaces
+    "modules-left": [
+        "custom/archlogo",
+        "hyprland/workspaces"
+    ],
+
+    // Modules Center - Empty for minimalist look
+    "modules-center": [],
+
+    // Modules Right - Volume, CPU, Memory, Date/Time
+    "modules-right": [
+        "pulseaudio",
+        "cpu",
+        "memory",
+        "clock"
+    ]
+}

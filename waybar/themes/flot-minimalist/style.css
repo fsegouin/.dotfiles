@@ -1,0 +1,175 @@
+/*
+ * Flot Minimalist - macOS Sequoia Style
+ * Transparent glass-like bar with blur (blur configured in Hyprland)
+ */
+
+/* -----------------------------------------------------
+ * Color Definitions - macOS Sequoia inspired
+ * ----------------------------------------------------- */
+@define-color background rgba(30, 30, 30, 0.65);
+@define-color background-hover rgba(255, 255, 255, 0.1);
+@define-color text-primary rgba(255, 255, 255, 0.95);
+@define-color text-secondary rgba(255, 255, 255, 0.7);
+@define-color accent #007AFF;
+@define-color workspace-active rgba(255, 255, 255, 0.2);
+@define-color workspace-hover rgba(255, 255, 255, 0.15);
+
+/* -----------------------------------------------------
+ * General
+ * ----------------------------------------------------- */
+* {
+    font-family: "SF Pro Display", "SF Pro Text", "JetBrainsMono Nerd Font", "Fira Sans", sans-serif;
+    font-size: 13px;
+    font-weight: 500;
+    border: none;
+    border-radius: 0;
+    min-height: 0;
+}
+
+window#waybar {
+    background-color: @background;
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+window#waybar.hidden {
+    opacity: 0.2;
+}
+
+/* -----------------------------------------------------
+ * Module Containers
+ * ----------------------------------------------------- */
+.modules-left {
+    padding-left: 8px;
+}
+
+.modules-right {
+    padding-right: 12px;
+}
+
+/* -----------------------------------------------------
+ * Arch Logo (Apple Menu equivalent)
+ * ----------------------------------------------------- */
+#custom-archlogo {
+    font-size: 16px;
+    color: @text-primary;
+    padding: 0 12px 0 8px;
+    margin: 4px 4px 4px 0;
+    border-radius: 6px;
+    transition: all 0.2s ease;
+}
+
+#custom-archlogo:hover {
+    background-color: @background-hover;
+}
+
+/* -----------------------------------------------------
+ * Workspaces
+ * ----------------------------------------------------- */
+#workspaces {
+    margin: 4px 0;
+    padding: 0;
+}
+
+#workspaces button {
+    color: @text-secondary;
+    padding: 0 8px;
+    margin: 0 2px;
+    border-radius: 6px;
+    transition: all 0.2s ease;
+    background: transparent;
+}
+
+#workspaces button:hover {
+    background-color: @workspace-hover;
+    color: @text-primary;
+}
+
+#workspaces button.active {
+    background-color: @workspace-active;
+    color: @text-primary;
+}
+
+#workspaces button.urgent {
+    background-color: rgba(255, 69, 58, 0.4);
+    color: @text-primary;
+}
+
+/* -----------------------------------------------------
+ * CPU
+ * ----------------------------------------------------- */
+#cpu {
+    color: @text-primary;
+    padding: 0 10px;
+    margin: 4px 4px;
+    border-radius: 6px;
+    transition: all 0.2s ease;
+}
+
+#cpu:hover {
+    background-color: @background-hover;
+}
+
+/* -----------------------------------------------------
+ * Memory
+ * ----------------------------------------------------- */
+#memory {
+    color: @text-primary;
+    padding: 0 10px;
+    margin: 4px 4px;
+    border-radius: 6px;
+    transition: all 0.2s ease;
+}
+
+#memory:hover {
+    background-color: @background-hover;
+}
+
+/* -----------------------------------------------------
+ * Volume (PulseAudio)
+ * ----------------------------------------------------- */
+#pulseaudio {
+    color: @text-primary;
+    padding: 0 10px;
+    margin: 4px 4px;
+    border-radius: 6px;
+    transition: all 0.2s ease;
+}
+
+#pulseaudio:hover {
+    background-color: @background-hover;
+}
+
+#pulseaudio.muted {
+    color: @text-secondary;
+}
+
+/* -----------------------------------------------------
+ * Clock - macOS style date/time
+ * ----------------------------------------------------- */
+#clock {
+    color: @text-primary;
+    padding: 0 10px;
+    margin: 4px 0;
+    border-radius: 6px;
+    transition: all 0.2s ease;
+}
+
+#clock:hover {
+    background-color: @background-hover;
+}
+
+/* -----------------------------------------------------
+ * Tooltips - macOS style
+ * ----------------------------------------------------- */
+tooltip {
+    background-color: rgba(40, 40, 40, 0.95);
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 8px 12px;
+}
+
+tooltip label {
+    color: @text-primary;
+    font-size: 12px;
+}
