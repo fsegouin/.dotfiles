@@ -145,6 +145,30 @@ window#waybar.hidden {
 }
 
 /* -----------------------------------------------------
+ * Bluetooth Audio Profile
+ * ----------------------------------------------------- */
+#custom-bt-profile {
+    color: @text-secondary;
+    font-size: 11px;
+    padding: 0 6px;
+    margin: 4px 0;
+    border-radius: 6px;
+    transition: all 0.2s ease;
+}
+
+#custom-bt-profile.a2dp {
+    color: @accent;
+}
+
+#custom-bt-profile.hfp {
+    color: rgba(255, 149, 0, 0.9);
+}
+
+#custom-bt-profile:hover {
+    background-color: @background-hover;
+}
+
+/* -----------------------------------------------------
  * Clock - macOS style date/time
  * ----------------------------------------------------- */
 #clock {

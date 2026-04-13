@@ -85,6 +85,7 @@
     // Modules Right - Volume, CPU, Memory, Date/Time
     "modules-right": [
         "pulseaudio",
+        "custom/bt-profile",
         "cpu",
         "memory",
         "clock"
